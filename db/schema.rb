@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_27_120826) do
+ActiveRecord::Schema.define(version: 2022_06_08_085011) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_stat_statements"
@@ -194,7 +194,7 @@ ActiveRecord::Schema.define(version: 2022_05_27_120826) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "locale", default: "en"
-    t.string "slug", default: "Category", null: false
+    t.string "slug", null: false
     t.index ["locale", "account_id"], name: "index_categories_on_locale_and_account_id"
     t.index ["locale"], name: "index_categories_on_locale"
     t.index ["slug", "locale", "portal_id"], name: "index_categories_on_slug_and_locale_and_portal_id", unique: true
